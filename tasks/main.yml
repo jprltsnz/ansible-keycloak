@@ -6,9 +6,9 @@
     - "{{ ansible_os_family }}.yml"
 
 - name: Install OpenJDK
-    package:
-      name: '{{ openjdk_pkgs }}'
-      state: present
+  package:
+    name: '{{ openjdk_pkgs }}'
+    state: present
 
 - name: check for existing install...
   become: yes
