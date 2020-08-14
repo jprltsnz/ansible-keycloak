@@ -2,6 +2,7 @@
 keycloak_ver: 11.0.0
 keycloak_mirror: https://downloads.jboss.org/keycloak
 
+redhat_jdk_version: 11
 keycloak_parent_install_dir: /usr/local
 
 keycloak_checksums:

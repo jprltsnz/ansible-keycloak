@@ -1,4 +1,15 @@
 ---
+- name: Include OS-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_os_family }}.yml"
+
+- name: Install OpenJDK
+    package:
+      name: '{{ openjdk_pkgs }}'
+      state: present
+
 - name: check for existing install...
   become: yes
   become_user: root

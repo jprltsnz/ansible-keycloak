@@ -1,0 +1,3 @@
+---
+openjdk_pkgs:
+  - 'java-{{ redhat_jdk_version }}-openjdk'
